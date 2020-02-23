@@ -74,7 +74,7 @@ class ApplicationController < Sinatra::Base
       User.find(session[:user_id])
     end
 
-    def self.is_logged_in?(session)
+    def self.logged_in?(session)
       session.include?(:user_id)
     end
   end
